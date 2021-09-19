@@ -6,6 +6,7 @@ export default function NoteId({ note }) {
     <main className={styles.main}>
       <h1 className={styles.title}>{note.title}</h1>
       <p className={styles.publishedAt}>{note.publishedAt}</p>
+      <p className="category">{note.category && `${note.category.name}`}</p>
       <div
         dangerouslySetInnerHTML={{
           __html: `${note.body}`,
